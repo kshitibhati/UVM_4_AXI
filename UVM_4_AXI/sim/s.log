@@ -1,0 +1,565 @@
+# //  Questa Sim
+# //  Version 10.0b linux May  5 2011
+# //
+# //  Copyright 1991-2011 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+# vsim +UVM_OBJECTION_TRACE +UVM_TESTNAME=axi_test_multi +UVM_VERBOSITY=UVM_MEDIUM -coverage -l s.log -sva -sv_seed random -novopt work.top 
+# Refreshing /home/maven2/Desktop/final_project_uvm_31/kk_full final_31/sim/work.top
+# Refreshing /home/maven2/Desktop/final_project_uvm_31/kk_full final_31/sim/work.axi_test_pkg
+# Loading sv_std.std
+# Loading mtiUvm.uvm_pkg
+# Loading work.axi_test_pkg
+# Loading work.top
+# Refreshing /home/maven2/Desktop/final_project_uvm_31/kk_full final_31/sim/work.axi_if
+# Loading work.axi_if
+# ** Warning: (vsim-8441) ../master_agt/master_driver.sv(197): Clocking block output vif.mdr_cb.wlast is not legal in this
+# or another expression.
+#         Region: /axi_test_pkg::master_driver
+# Loading /home/cad/eda/questa10b/questa_sim/uvm-1.0p1/linux/uvm_dpi.so
+# ** Warning: (vsim-8634) Code was not compiled with coverage options.
+# Sv_Seed = 3608375238
+#  
+add wave -r sim:/top/*
+run -all
+# ----------------------------------------------------------------
+# UVM-1.0p1 
+# (C) 2007-2011 Mentor Graphics Corporation
+# (C) 2007-2011 Cadence Design Systems, Inc.
+# (C) 2006-2011 Synopsys, Inc.
+# ----------------------------------------------------------------
+# UVM_INFO @ 0: reporter [RNTST] Running test axi_test_multi...
+# UVM_INFO @ 0: run [OBJTN_TRC] Object uvm_test_top raised 1 objection(s): count=1  total=1
+# UVM_INFO @ 0: run [OBJTN_TRC] Object uvm_top added 1 objection(s) to its total (raised from source object uvm_test_top): count=0  total=1
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ----------------------------------------------------------------
+# Name                         Type                    Size  Value
+# ----------------------------------------------------------------
+# uvm_test_top                 axi_test_multi          -     @463 
+#   axi_envh                   axi_tb                  -     @480 
+#     magt_top                 master_agent_top        -     @488 
+#       agnth                  master_agent            -     @621 
+#         drvh                 master_driver           -     @638 
+#           rsp_port           uvm_analysis_port       -     @653 
+#           sqr_pull_port      uvm_seq_item_pull_port  -     @645 
+#         m_seqrh              master_sequencer        -     @661 
+#           rsp_export         uvm_analysis_export     -     @668 
+#           seq_item_export    uvm_seq_item_pull_imp   -     @762 
+#           arbitration_queue  array                   0     -    
+#           lock_queue         array                   0     -    
+#           num_last_reqs      integral                32    'd1  
+#           num_last_rsps      integral                32    'd1  
+#         monh                 master_monitor          -     @630 
+#     sagt_top                 slave_agent_top         -     @503 
+#       agnth                  slave_agent             -     @781 
+#         drvh                 slave_driver            -     @798 
+#           rsp_port           uvm_analysis_port       -     @813 
+#           sqr_pull_port      uvm_seq_item_pull_port  -     @805 
+#         monh                 slave_monitor           -     @790 
+#         s_seqrh              slave_sequencer         -     @821 
+#           rsp_export         uvm_analysis_export     -     @828 
+#           seq_item_export    uvm_seq_item_pull_imp   -     @922 
+#           arbitration_queue  array                   0     -    
+#           lock_queue         array                   0     -    
+#           num_last_reqs      integral                32    'd1  
+#           num_last_rsps      integral                32    'd1  
+#     v_sequencer              axi_virtual_sequencer   -     @511 
+#       rsp_export             uvm_analysis_export     -     @518 
+#       seq_item_export        uvm_seq_item_pull_imp   -     @612 
+#       arbitration_queue      array                   0     -    
+#       lock_queue             array                   0     -    
+#       num_last_reqs          integral                32    'd1  
+#       num_last_rsps          integral                32    'd1  
+# ----------------------------------------------------------------
+# 
+# UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
+# ----------------------------------------------------------------
+# Name                         Type                    Size  Value
+# ----------------------------------------------------------------
+# uvm_test_top                 axi_test_multi          -     @463 
+#   axi_envh                   axi_tb                  -     @480 
+#     magt_top                 master_agent_top        -     @488 
+#       agnth                  master_agent            -     @621 
+#         drvh                 master_driver           -     @638 
+#           rsp_port           uvm_analysis_port       -     @653 
+#           sqr_pull_port      uvm_seq_item_pull_port  -     @645 
+#         m_seqrh              master_sequencer        -     @661 
+#           rsp_export         uvm_analysis_export     -     @668 
+#           seq_item_export    uvm_seq_item_pull_imp   -     @762 
+#           arbitration_queue  array                   0     -    
+#           lock_queue         array                   0     -    
+#           num_last_reqs      integral                32    'd1  
+#           num_last_rsps      integral                32    'd1  
+#         monh                 master_monitor          -     @630 
+#     sagt_top                 slave_agent_top         -     @503 
+#       agnth                  slave_agent             -     @781 
+#         drvh                 slave_driver            -     @798 
+#           rsp_port           uvm_analysis_port       -     @813 
+#           sqr_pull_port      uvm_seq_item_pull_port  -     @805 
+#         monh                 slave_monitor           -     @790 
+#         s_seqrh              slave_sequencer         -     @821 
+#           rsp_export         uvm_analysis_export     -     @828 
+#           seq_item_export    uvm_seq_item_pull_imp   -     @922 
+#           arbitration_queue  array                   0     -    
+#           lock_queue         array                   0     -    
+#           num_last_reqs      integral                32    'd1  
+#           num_last_rsps      integral                32    'd1  
+#     v_sequencer              axi_virtual_sequencer   -     @511 
+#       rsp_export             uvm_analysis_export     -     @518 
+#       seq_item_export        uvm_seq_item_pull_imp   -     @612 
+#       arbitration_queue      array                   0     -    
+#       lock_queue             array                   0     -    
+#       num_last_reqs          integral                32    'd1  
+#       num_last_rsps          integral                32    'd1  
+# ----------------------------------------------------------------
+# 
+# -------------Master_sequence---------------
+# UVM_INFO ../master_agt/master_driver.sv(78) @ 0: uvm_test_top.axi_envh.magt_top.agnth.drvh [MASTER_DRIVER] printing from driver 
+#  ----------------------------------------------------------------------------------------------------------------
+# Name                           Type                    Size  Value                                              
+# ----------------------------------------------------------------------------------------------------------------
+# req                            signal_xtn              -     @968                                               
+#   awid                         integral                4     'h0                                                
+#   awaddr                       integral                32    'h9e19c6e2                                         
+#   awlen                        integral                8     'hb                                                
+#   awsize                       integral                3     'h0                                                
+#   awburst                      integral                2     'h2                                                
+#   awvalid                      integral                1     'h0                                                
+#   awready                      integral                1     'h0                                                
+#   wdata                        integral                32    'hf1969904                                         
+#   wstrb                        integral                4     'h1                                                
+#   wlast                        integral                1     'h0                                                
+#   wvalid                       integral                1     'h0                                                
+#   wready                       integral                1     'h0                                                
+#   bid                          da(integral)            0     -                                                  
+#   bresp                        integral                2     'h0                                                
+#   bvalid                       integral                1     'h0                                                
+#   bready                       integral                1     'h0                                                
+#   arid                         integral                4     'h1                                                
+#   araddr                       integral                32    'hfce51ebf                                         
+#   arlen                        integral                8     'h8                                                
+#   arsize                       integral                3     'h0                                                
+#   arburst                      integral                2     'h0                                                
+#   arvalid                      integral                1     'h0                                                
+#   arready                      integral                1     'h0                                                
+#   rid                          integral                4     'h0                                                
+#   rresp                        integral                2     'h0                                                
+#   rlast                        integral                1     'h0                                                
+#   rvalid                       integral                1     'h0                                                
+#   rready                       integral                1     'h0                                                
+#   m_data                       da(integral)            12    -                                                  
+#     [0]                        integral                32    'ha21d305a                                         
+#     [1]                        integral                32    'hc1832fda                                         
+#     [2]                        integral                32    'hc1113fd6                                         
+#     [3]                        integral                32    'hc8872c3f                                         
+#     [4]                        integral                32    'hf8253a17                                         
+#     ...                        ...                     ...   ...                                                
+#     [7]                        integral                32    'he6af2b45                                         
+#     [8]                        integral                32    'hc64d355e                                         
+#     [9]                        integral                32    'hc5d325a8                                         
+#     [10]                       integral                32    'hc54135fc                                         
+#     [11]                       integral                32    'hfcd72a4d                                         
+#   strb_gen                     da(integral)            12    -                                                  
+#     [0]                        integral                4     'h4                                                
+#     [1]                        integral                4     'h8                                                
+#     [2]                        integral                4     'h1                                                
+#     [3]                        integral                4     'h2                                                
+#     [4]                        integral                4     'h4                                                
+#     ...                        ...                     ...   ...                                                
+#     [7]                        integral                4     'h2                                                
+#     [8]                        integral                4     'h4                                                
+#     [9]                        integral                4     'h8                                                
+#     [10]                       integral                4     'h1                                                
+#     [11]                       integral                4     'h2                                                
+#   begin_time                   time                    64    0                                                  
+#   depth                        int                     32    'd2                                                
+#   parent sequence (name)       string                  6     m_xtns                                             
+#   parent sequence (full name)  string                  51    uvm_test_top.axi_envh.magt_top.agnth.m_seqrh.m_xtns
+#   sequencer                    string                  44    uvm_test_top.axi_envh.magt_top.agnth.m_seqrh       
+# ----------------------------------------------------------------------------------------------------------------
+# 
+#                    0>>>>>>>>>>>>>>>>>MASTER DRIVER COME WR_ADDRESS_CHANNEL =1<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>>>MASTER DRIVER COME WR_DATA_CHANNEL =1<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>>>MASTER DRIVER COME WR_RESPONSE_CHANNEL =1<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>>>MASTER DRIVER COME READ_ADDR_CHANNEL =1<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0<<<<<<<<<<<<<<<<MASTER DRIVER COME READ_DATA_CHANNEL >>>>>>>>>>>>>>>>>>>>>>>
+#                    0>>>>>>>>>>>>>>>>>SLAVE DRIVER COME WR_ADDRESS_CHANNEL =0<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>SLAVE DRIVER COME WR_DATA_CHANNEL =0<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>>>SLAVE DRIVER COME WR_RESPONSE_CHANNEL =1<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>>>SLAVE DRIVER COME READ_ADDRESSS_CHANNEL <<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>>>SLAVE DRIVER COME READ_DATA_CHANNEL <<<<<<<<<<<<<<<<<<<<<<<<<<<
+# -------------Master_sequence---------------
+#                    0>>>>>>>>>>>>>>>>>SLAVE DRIVER COME WR_RESPONSE_CHANNEL =2<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>>>SLAVE DRIVER COME READ_ADDRESSS_CHANNEL <<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>>>SLAVE DRIVER COME READ_DATA_CHANNEL <<<<<<<<<<<<<<<<<<<<<<<<<<<
+# UVM_INFO ../master_agt/master_driver.sv(78) @ 0: uvm_test_top.axi_envh.magt_top.agnth.drvh [MASTER_DRIVER] printing from driver 
+#  ----------------------------------------------------------------------------------------------------------------
+# Name                           Type                    Size  Value                                              
+# ----------------------------------------------------------------------------------------------------------------
+# req                            signal_xtn              -     @983                                               
+#   awid                         integral                4     'h9                                                
+#   awaddr                       integral                32    'h5e19fdd0                                         
+#   awlen                        integral                8     'hb                                                
+#   awsize                       integral                3     'h2                                                
+#   awburst                      integral                2     'h0                                                
+#   awvalid                      integral                1     'h0                                                
+#   awready                      integral                1     'h0                                                
+#   wdata                        integral                32    'hb196acdf                                         
+#   wstrb                        integral                4     'h3                                                
+#   wlast                        integral                1     'h0                                                
+#   wvalid                       integral                1     'h0                                                
+#   wready                       integral                1     'h0                                                
+#   bid                          da(integral)            0     -                                                  
+#   bresp                        integral                2     'h0                                                
+#   bvalid                       integral                1     'h0                                                
+#   bready                       integral                1     'h0                                                
+#   arid                         integral                4     'h2                                                
+#   araddr                       integral                32    'h3ce57c5c                                         
+#   arlen                        integral                8     'h2                                                
+#   arsize                       integral                3     'h1                                                
+#   arburst                      integral                2     'h1                                                
+#   arvalid                      integral                1     'h0                                                
+#   arready                      integral                1     'h0                                                
+#   rid                          integral                4     'h0                                                
+#   rresp                        integral                2     'h0                                                
+#   rlast                        integral                1     'h0                                                
+#   rvalid                       integral                1     'h0                                                
+#   rready                       integral                1     'h0                                                
+#   m_data                       da(integral)            12    -                                                  
+#     [0]                        integral                32    'h621d5949                                         
+#     [1]                        integral                32    'h81834e81                                         
+#     [2]                        integral                32    'h81115ed3                                         
+#     [3]                        integral                32    'h88874d7a                                         
+#     [4]                        integral                32    'hb8255b4c                                         
+#     ...                        ...                     ...   ...                                                
+#     [7]                        integral                32    'ha6af4a34                                         
+#     [8]                        integral                32    'h864d5405                                         
+#     [9]                        integral                32    'h85d344f3                                         
+#     [10]                       integral                32    'h854154e1                                         
+#     [11]                       integral                32    'hbcd74b60                                         
+#   strb_gen                     da(integral)            12    -                                                  
+#     [0]                        integral                4     'hf                                                
+#     [1]                        integral                4     'hf                                                
+#     [2]                        integral                4     'hf                                                
+#     [3]                        integral                4     'hf                                                
+#     [4]                        integral                4     'hf                                                
+#     ...                        ...                     ...   ...                                                
+#     [7]                        integral                4     'hf                                                
+#     [8]                        integral                4     'hf                                                
+#     [9]                        integral                4     'hf                                                
+#     [10]                       integral                4     'hf                                                
+#     [11]                       integral                4     'hf                                                
+#   begin_time                   time                    64    0                                                  
+#   depth                        int                     32    'd2                                                
+#   parent sequence (name)       string                  6     m_xtns                                             
+#   parent sequence (full name)  string                  51    uvm_test_top.axi_envh.magt_top.agnth.m_seqrh.m_xtns
+#   sequencer                    string                  44    uvm_test_top.axi_envh.magt_top.agnth.m_seqrh       
+# ----------------------------------------------------------------------------------------------------------------
+# 
+#                    0>>>>>>>>>>>>>>>>>MASTER DRIVER COME WR_ADDRESS_CHANNEL =2<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>>>MASTER DRIVER COME WR_RESPONSE_CHANNEL =2<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>>>MASTER DRIVER COME READ_ADDR_CHANNEL =2<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0<<<<<<<<<<<<<<<<MASTER DRIVER COME READ_DATA_CHANNEL >>>>>>>>>>>>>>>>>>>>>>>
+# -------------Master_sequence---------------
+# UVM_INFO ../master_agt/master_driver.sv(78) @ 0: uvm_test_top.axi_envh.magt_top.agnth.drvh [MASTER_DRIVER] printing from driver 
+#  ----------------------------------------------------------------------------------------------------------------
+# Name                           Type                    Size  Value                                              
+# ----------------------------------------------------------------------------------------------------------------
+# req                            signal_xtn              -     @1002                                              
+#   awid                         integral                4     'h4                                                
+#   awaddr                       integral                32    'hde19e1a7                                         
+#   awlen                        integral                8     'hf                                                
+#   awsize                       integral                3     'h0                                                
+#   awburst                      integral                2     'h2                                                
+#   awvalid                      integral                1     'h0                                                
+#   awready                      integral                1     'h0                                                
+#   wdata                        integral                32    'h31969642                                         
+#   wstrb                        integral                4     'h8                                                
+#   wlast                        integral                1     'h0                                                
+#   wvalid                       integral                1     'h0                                                
+#   wready                       integral                1     'h0                                                
+#   bid                          da(integral)            0     -                                                  
+#   bresp                        integral                2     'h0                                                
+#   bvalid                       integral                1     'h0                                                
+#   bready                       integral                1     'h0                                                
+#   arid                         integral                4     'h5                                                
+#   araddr                       integral                32    'hbce51801                                         
+#   arlen                        integral                8     'h1                                                
+#   arsize                       integral                3     'h0                                                
+#   arburst                      integral                2     'h2                                                
+#   arvalid                      integral                1     'h0                                                
+#   arready                      integral                1     'h0                                                
+#   rid                          integral                4     'h0                                                
+#   rresp                        integral                2     'h0                                                
+#   rlast                        integral                1     'h0                                                
+#   rvalid                       integral                1     'h0                                                
+#   rready                       integral                1     'h0                                                
+#   m_data                       da(integral)            16    -                                                  
+#     [0]                        integral                32    'he21d36e4                                         
+#     [1]                        integral                32    'h18321a2                                          
+#     [2]                        integral                32    'h11131ee                                          
+#     [3]                        integral                32    'h8872259                                          
+#     [4]                        integral                32    'h38253471                                         
+#     ...                        ...                     ...   ...                                                
+#     [11]                       integral                32    'h3cd7242b                                         
+#     [12]                       integral                32    'h33753622                                         
+#     [13]                       integral                32    'h32fb260f                                         
+#     [14]                       integral                32    'h32693607                                         
+#     [15]                       integral                32    'h39ff27e0                                         
+#   strb_gen                     da(integral)            16    -                                                  
+#     [0]                        integral                4     'h8                                                
+#     [1]                        integral                4     'h1                                                
+#     [2]                        integral                4     'h2                                                
+#     [3]                        integral                4     'h4                                                
+#     [4]                        integral                4     'h8                                                
+#     ...                        ...                     ...   ...                                                
+#     [11]                       integral                4     'h4                                                
+#     [12]                       integral                4     'h8                                                
+#     [13]                       integral                4     'h1                                                
+#     [14]                       integral                4     'h2                                                
+#     [15]                       integral                4     'h4                                                
+#   begin_time                   time                    64    0                                                  
+#   depth                        int                     32    'd2                                                
+#   parent sequence (name)       string                  6     m_xtns                                             
+#   parent sequence (full name)  string                  51    uvm_test_top.axi_envh.magt_top.agnth.m_seqrh.m_xtns
+#   sequencer                    string                  44    uvm_test_top.axi_envh.magt_top.agnth.m_seqrh       
+# ----------------------------------------------------------------------------------------------------------------
+# 
+#                    0>>>>>>>>>>>>>>>>>MASTER DRIVER COME WR_ADDRESS_CHANNEL =3<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>>>MASTER DRIVER COME WR_RESPONSE_CHANNEL =3<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>>>MASTER DRIVER COME READ_ADDR_CHANNEL =3<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0<<<<<<<<<<<<<<<<MASTER DRIVER COME READ_DATA_CHANNEL >>>>>>>>>>>>>>>>>>>>>>>
+#                    0>>>>>>>>>>>>>>>>>SLAVE DRIVER COME WR_RESPONSE_CHANNEL =3<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>>>SLAVE DRIVER COME READ_ADDRESSS_CHANNEL <<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>>>SLAVE DRIVER COME READ_DATA_CHANNEL <<<<<<<<<<<<<<<<<<<<<<<<<<<
+# -------------Master_sequence---------------
+#                    0>>>>>>>>>>>>>>>>>SLAVE DRIVER COME WR_RESPONSE_CHANNEL =4<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>>>SLAVE DRIVER COME READ_ADDRESSS_CHANNEL <<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>>>SLAVE DRIVER COME READ_DATA_CHANNEL <<<<<<<<<<<<<<<<<<<<<<<<<<<
+# UVM_INFO ../master_agt/master_driver.sv(78) @ 0: uvm_test_top.axi_envh.magt_top.agnth.drvh [MASTER_DRIVER] printing from driver 
+#  ----------------------------------------------------------------------------------------------------------------
+# Name                           Type                    Size  Value                                              
+# ----------------------------------------------------------------------------------------------------------------
+# req                            signal_xtn              -     @1012                                              
+#   awid                         integral                4     'h5                                                
+#   awaddr                       integral                32    'h1ef76705                                         
+#   awlen                        integral                8     'hb                                                
+#   awsize                       integral                3     'h2                                                
+#   awburst                      integral                2     'h1                                                
+#   awvalid                      integral                1     'h0                                                
+#   awready                      integral                1     'h0                                                
+#   wdata                        integral                32    'h49102deb                                         
+#   wstrb                        integral                4     'ha                                                
+#   wlast                        integral                1     'h0                                                
+#   wvalid                       integral                1     'h0                                                
+#   wready                       integral                1     'h0                                                
+#   bid                          da(integral)            0     -                                                  
+#   bresp                        integral                2     'h0                                                
+#   bvalid                       integral                1     'h0                                                
+#   bready                       integral                1     'h0                                                
+#   arid                         integral                4     'h9                                                
+#   araddr                       integral                32    'h7c1bf940                                         
+#   arlen                        integral                8     'hf                                                
+#   arsize                       integral                3     'h2                                                
+#   arburst                      integral                2     'h0                                                
+#   arvalid                      integral                1     'h0                                                
+#   arready                      integral                1     'h0                                                
+#   rid                          integral                4     'h0                                                
+#   rresp                        integral                2     'h0                                                
+#   rlast                        integral                1     'h0                                                
+#   rvalid                       integral                1     'h0                                                
+#   rready                       integral                1     'h0                                                
+#   m_data                       da(integral)            12    -                                                  
+#     [0]                        integral                32    'h21cd3c58                                         
+#     [1]                        integral                32    'h415333f3                                         
+#     [2]                        integral                32    'h48c920a1                                         
+#     [3]                        integral                32    'h405f3316                                         
+#     [4]                        integral                32    'h78652658                                         
+#     ...                        ...                     ...   ...                                                
+#     [7]                        integral                32    'h7ef7366f                                         
+#     [8]                        integral                32    'h461d295d                                         
+#     [9]                        integral                32    'h45833981                                         
+#     [10]                       integral                32    'h7d192693                                         
+#     [11]                       integral                32    'h448f3964                                         
+#   strb_gen                     da(integral)            12    -                                                  
+#     [0]                        integral                4     'he                                                
+#     [1]                        integral                4     'hf                                                
+#     [2]                        integral                4     'hf                                                
+#     [3]                        integral                4     'hf                                                
+#     [4]                        integral                4     'hf                                                
+#     ...                        ...                     ...   ...                                                
+#     [7]                        integral                4     'hf                                                
+#     [8]                        integral                4     'hf                                                
+#     [9]                        integral                4     'hf                                                
+#     [10]                       integral                4     'hf                                                
+#     [11]                       integral                4     'hf                                                
+#   begin_time                   time                    64    0                                                  
+#   depth                        int                     32    'd2                                                
+#   parent sequence (name)       string                  6     m_xtns                                             
+#   parent sequence (full name)  string                  51    uvm_test_top.axi_envh.magt_top.agnth.m_seqrh.m_xtns
+#   sequencer                    string                  44    uvm_test_top.axi_envh.magt_top.agnth.m_seqrh       
+# ----------------------------------------------------------------------------------------------------------------
+# 
+#                    0>>>>>>>>>>>>>>>>>MASTER DRIVER COME WR_ADDRESS_CHANNEL =4<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>>>MASTER DRIVER COME WR_RESPONSE_CHANNEL =4<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0>>>>>>>>>>>>>>>>>MASTER DRIVER COME READ_ADDR_CHANNEL =4<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                    0<<<<<<<<<<<<<<<<MASTER DRIVER COME READ_DATA_CHANNEL >>>>>>>>>>>>>>>>>>>>>>>
+#                   30<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT READ_DATA_CHANNEL >>>>>>>>>>>>>>>>>>>>>>>
+#                   50<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT READ_ADDR_CHANNEL =4>>>>>>>>>>>>>>>>>>>>>>>
+#                   50<<<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT WR_ADDRESS_CHANNEL =4>>>>>>>>>>>>>>>>>>>>>>>
+#                   50length=8
+#                   70<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT READ_DATA_CHANNEL >>>>>>>>>>>>>>>>>>>>>>>
+#                   70<<<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT WR_ADDRESS_CHANNEL =3>>>>>>>>>>>>>>>>>>>>>>>
+#                   70<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT READ_ADDR_CHANNEL =3>>>>>>>>>>>>>>>>>>>>>>>
+#                   70s_data[2652489442]=001d0000
+# Unaligned address
+# wrap mode & Unaligned address
+#                   70rdata[0]=12153524
+#                   90<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT READ_ADDR_CHANNEL =2>>>>>>>>>>>>>>>>>>>>>>>
+#                   90<<<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT WR_ADDRESS_CHANNEL =2>>>>>>>>>>>>>>>>>>>>>>>
+#                   90rdata[1]=c0895e81
+#                   90s_data[519530208]=c1000000
+# Aligned address
+# Wrap mode & aligned addressS
+#                  110<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT READ_DATA_CHANNEL >>>>>>>>>>>>>>>>>>>>>>>
+#                  110<<<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT WR_ADDRESS_CHANNEL =1>>>>>>>>>>>>>>>>>>>>>>>
+#                  110<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT READ_ADDR_CHANNEL =1>>>>>>>>>>>>>>>>>>>>>>>
+#                  110s_data[519530212]=000000d6
+# Aligned address
+# Wrap mode & aligned addressS
+#                  110rdata[2]=8484d609
+#                  130>>>>>>>>>>>>>>>>>SLAVE DRIVER COME OUT READ_ADDRESSS_CHANNEL <<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                  130<<<<<<<<<<<<<<<<<<<SLAVE DRIVER COME OUT WR_ADDRESS_CHANNEL =0 >>>>>>>>>>>>>>>>>>>>>
+#                  130>>>>>>>>>>>>>>>>>SLAVE DRIVER COME WR_ADDRESS_CHANNEL =1<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                  130rdata[3]=b1f05663
+#                  130s_data[519530216]=00002c00
+#                  150<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT READ_DATA_CHANNEL >>>>>>>>>>>>>>>>>>>>>>>
+#                  150s_data[519530220]=00250000
+#                  150rdata[4]=06b97b0d
+#                  170rdata[5]=46df998d
+#                  170s_data[519530224]=ff000000
+#                  190s_data[519530228]=0000009b
+#                  190rdata[6]=b2c28465
+#                  210rdata[7]=89375212
+#                  210s_data[519530232]=00002b00
+#                  230s_data[519530236]=004d0000
+#                  230rdata[8]=00f3e301
+#                  230>>>>>>>>>>>>>>>>>SLAVE DRIVER COME OUT READ_DATA_CHANNEL <<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                  250s_data[519530240]=c5000000
+#                  270s_data[519530244]=000000fc
+#                  270length=2
+#                  290<<<<<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT WR_DATA_CHANNEL =1>>>>>>>>>>>>>>>>>>>
+#                  290>>>>>>>>>>>>>>>>>MASTER DRIVER COME WR_DATA_CHANNEL =2<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                  290rdata[0]=06d7cd0d
+#                  290s_data[519530248]=00002a00
+#                  310<<<<<<<<<<<<<<<SLAVE DRIVER COME OUT WR_DATA_CHANNEL =0>>>>>>>>>>>>>>>>>>>>
+#                  310>>>>>>>>>>>>>>>SLAVE DRIVER COME WR_DATA_CHANNEL =1<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                  310rdata[1]=3b23f176
+#                  330<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT WR_RESPONSE_CHANNEL =1>>>>>>>>>>>>>>>>>>>>>>>
+#                  330rdata[2]=1e8dcd3d
+#                  330>>>>>>>>>>>>>>>>>SLAVE DRIVER COME OUT READ_DATA_CHANNEL <<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                  350s_data[3726238119]=621d5949
+#                  370length=1
+#                  370s_data[3726238120]=81834e81
+#                  390s_data[3726238124]=81115ed3
+#                  390rdata[0]=76d457ed
+#                  410rdata[1]=462df78c
+#                  410>>>>>>>>>>>>>>>>>SLAVE DRIVER COME OUT READ_DATA_CHANNEL <<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                  410s_data[3726238128]=88874d7a
+#                  430s_data[3726238132]=b8255b4c
+#                  450length=15
+#                  450s_data[3726238136]=bfab4bb8
+#                  470s_data[3726238140]=bf395bea
+#                  470rdata[0]=7cfde9f9
+#                  490rdata[1]=e33724c6
+#                  490s_data[3726238144]=a6af4a34
+#                  510s_data[3726238148]=864d5405
+#                  510rdata[2]=e2f784c5
+#                  530rdata[3]=d513d2aa
+#                  530s_data[3726238152]=85d344f3
+#                  550s_data[3726238156]=854154e1
+#                  550rdata[4]=72aff7e5
+#                  570<<<<<<<<<<<<<<<SLAVE DRIVER COME OUT WR_RESPONSE_CHANNEL =4>>>>>>>>>>>>>>>>>>>>>>>>>>
+#                  570<<<<<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT WR_DATA_CHANNEL =2>>>>>>>>>>>>>>>>>>>
+#                  570>>>>>>>>>>>>>>>>>MASTER DRIVER COME WR_DATA_CHANNEL =3<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                  570rdata[5]=bbd27277
+#                  570s_data[3726238160]=bcd74b60
+#                  590<<<<<<<<<<<<<<<SLAVE DRIVER COME OUT WR_DATA_CHANNEL =1>>>>>>>>>>>>>>>>>>>>
+#                  590>>>>>>>>>>>>>>>SLAVE DRIVER COME WR_DATA_CHANNEL =2<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                  590rdata[6]=8932d612
+#                  610<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT WR_RESPONSE_CHANNEL =2>>>>>>>>>>>>>>>>>>>>>>>
+#                  610rdata[7]=47ecdb8f
+#                  630s_data[519530245]=e2000000
+#                  630rdata[8]=793069f2
+#                  650rdata[9]=e77696ce
+#                  650s_data[519530248]=000000a2
+#                  670s_data[519530252]=00003100
+#                  670rdata[10]=f4007ae8
+#                  690rdata[11]=e2ca4ec5
+#                  690s_data[519530256]=00870000
+#                  710s_data[519530260]=38000000
+#                  710rdata[12]=2e58495c
+#                  730rdata[13]=de8e28bd
+#                  730s_data[519530264]=000000af
+#                  750s_data[519530268]=00003400
+#                  750rdata[14]=96ab582d
+#                  770rdata[15]=b2a72665
+#                  770>>>>>>>>>>>>>>>>>SLAVE DRIVER COME OUT READ_DATA_CHANNEL <<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                  770s_data[519530272]=00af0000
+#                  790s_data[519530276]=06000000
+#                  810s_data[519530280]=000000b8
+#                  830s_data[519530284]=00003b00
+#                  850s_data[519530288]=00d70000
+#                  870s_data[519530292]=33000000
+#                  890s_data[519530296]=0000000f
+#                  910s_data[519530300]=00003600
+#                  930<<<<<<<<<<<<<<<SLAVE DRIVER COME OUT WR_RESPONSE_CHANNEL =4>>>>>>>>>>>>>>>>>>>>>>>>>>
+#                  930<<<<<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT WR_DATA_CHANNEL =3>>>>>>>>>>>>>>>>>>>
+#                  930>>>>>>>>>>>>>>>>>MASTER DRIVER COME WR_DATA_CHANNEL =4<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                  930s_data[519530304]=00ff0000
+#                  950<<<<<<<<<<<<<<<SLAVE DRIVER COME OUT WR_DATA_CHANNEL =2>>>>>>>>>>>>>>>>>>>>
+#                  950>>>>>>>>>>>>>>>SLAVE DRIVER COME WR_DATA_CHANNEL =3<<<<<<<<<<<<<<<<<<<<<<<<<<<
+#                  970<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT WR_RESPONSE_CHANNEL =3>>>>>>>>>>>>>>>>>>>>>>>
+#                  990s_data[519530308]=21cd3c00
+#                 1010s_data[519530312]=415333f3
+#                 1030s_data[519530316]=48c920a1
+#                 1050s_data[519530320]=405f3316
+#                 1070s_data[519530324]=78652658
+#                 1090s_data[519530328]=7feb36ca
+#                 1110s_data[519530332]=6761279b
+#                 1130s_data[519530336]=7ef7366f
+#                 1150s_data[519530340]=461d295d
+#                 1170s_data[519530344]=45833981
+#                 1190s_data[519530348]=7d192693
+#                 1210<<<<<<<<<<<<<<<SLAVE DRIVER COME OUT WR_RESPONSE_CHANNEL =4>>>>>>>>>>>>>>>>>>>>>>>>>>
+#                 1210<<<<<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT WR_DATA_CHANNEL =4>>>>>>>>>>>>>>>>>>>
+#                 1210s_data[519530352]=448f3964
+#                 1230<<<<<<<<<<<<<<<SLAVE DRIVER COME OUT WR_DATA_CHANNEL =3>>>>>>>>>>>>>>>>>>>>
+#                 1250<<<<<<<<<<<<<<<<MASTER DRIVER COME OUT WR_RESPONSE_CHANNEL =4>>>>>>>>>>>>>>>>>>>>>>>
+# UVM_INFO @ 1500: run [OBJTN_TRC] Object uvm_test_top dropped 1 objection(s): count=0  total=0
+# UVM_INFO @ 1500: run [OBJTN_TRC] Object uvm_test_top all_dropped 1 objection(s): count=0  total=0
+# UVM_INFO @ 1500: run [OBJTN_TRC] Object uvm_top subtracted 1 objection(s) from its total (dropped from source object uvm_test_top): count=0  total=0
+# UVM_INFO @ 1500: run [OBJTN_TRC] Object uvm_top subtracted 1 objection(s) from its total (all_dropped from source object uvm_test_top): count=0  total=0
+# UVM_INFO verilog_src/uvm-1.0p1/src/base/uvm_objection.svh(1116) @ 1500: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :   14
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [MASTER_DRIVER]     4
+# [OBJTN_TRC]     6
+# [RNTST]     1
+# [TEST_DONE]     1
+# [UVMTOP]     2
+# ** Note: $finish    : /home/cad/eda/questa10b/questa_sim/linux/../verilog_src/uvm-1.0p1/src/base/uvm_root.svh(392)
+#    Time: 1500 ns  Iteration: 44  Instance: /top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at /home/cad/eda/questa10b/questa_sim/linux/../verilog_src/uvm-1.0p1/src/base/uvm_root.svh line 392
